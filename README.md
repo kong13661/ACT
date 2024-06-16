@@ -76,13 +76,13 @@ To train ImageNet 64x64, you need first download the reference batch from [guide
 python train_imagenet64.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode train --fid_path reference_batch_file --ckpt_path save_path --device gpu_num
 ```
 
-### LSUN CAT 64x64
+### LSUN CAT 256x256
 
 ```bash
 python lsun_cat_256.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode train --fid_path reference_batch_file --ckpt_path save_path --device gpu_num
 ```
 
-## Convert ImageNet 256x256 dataset
+## Convert ImageNet 64x64 dataset
 
 You need to download ImageNet 64x64 dataset with format `.npz` from [ImageNet](https://image-net.org/).
 
