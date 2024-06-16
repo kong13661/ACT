@@ -1,4 +1,4 @@
-# ACT: Adversarial Consistency Training
+# ACT-Diffusion: Efficient Adversarial Consistency Training for One-step Diffusion Models
 
 ## Download checkpoint
 
