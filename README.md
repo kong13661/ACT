@@ -8,6 +8,8 @@ Download CIFAR10 checkpoint from [cifar10_fid_6_0.ckpt](https://1drv.ms/u/s!Aqkz
 
 Download ImageNet 64x64 checkpoint from [imagenet_fid_10_6.ckpt](https://1drv.ms/u/s!Aqkz6X6nVZGDjJZpahGmRv_FLxCJsA?e=M5ZAk8).
 
+Download LSUNCAT 256x256 checkpoint from [lsun256_fid_13_0.ckpt](https://1drv.ms/u/s!Aqkz6X6nVZGDke4wSYVa96wAvLqV5w?e=bZg2WR).
+
 ## Install environment
 
 Using code below to install the package.
@@ -31,7 +33,7 @@ python train_cifar10.py --dataset_path your_dataset_path --resume-from checkpoin
 To evaluation ImageNet 64x64, you need first download the reference batch from [guided-diffusion/evaluations](https://github.com/openai/guided-diffusion/tree/main/evaluations) or [one_driver](https://1drv.ms/u/s!Aqkz6X6nVZGDjJgDTh_gfUjmHn3AEA?e=sV0SZc).
 
 ```bash
-python train_cifar10.py --dataset_path your_dataset_path --resume-from checkpoint_file --fid_path reference_batch_file --mode eval
+python train_imagenet64.py --dataset_path your_dataset_path --resume-from checkpoint_file --fid_path reference_batch_file --mode eval
 ```
 
 ## Sample
@@ -47,7 +49,13 @@ python train_cifar10.py --dataset_path your_dataset_path --resume-from checkpoin
 ### ImageNet 64x64
 
 ```bash
-python train_cifar10.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode sample
+python train_imagenet64.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode sample
+```
+
+### LSUNCAT 256x256
+
+```bash
+python lsun_cat_256.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode sample
 ```
 
 ## Train
@@ -65,10 +73,14 @@ python train_cifar10.py --dataset_path your_dataset_path --resume-from checkpoin
 To train ImageNet 64x64, you need first download the reference batch from [guided-diffusion/evaluations](https://github.com/openai/guided-diffusion/tree/main/evaluations) or [one_driver](https://1drv.ms/u/s!Aqkz6X6nVZGDjJgDTh_gfUjmHn3AEA?e=sV0SZc). (for period evaluation)
 
 ```bash
-python train_cifar10.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode train --fid_path reference_batch_file --ckpt_path save_path --device gpu_num
+python train_imagenet64.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode train --fid_path reference_batch_file --ckpt_path save_path --device gpu_num
 ```
 
+### LSUN CAT 64x64
 
+```bash
+python lsun_cat_256.py --dataset_path your_dataset_path --resume-from checkpoint_file --mode train --fid_path reference_batch_file --ckpt_path save_path --device gpu_num
+```
 
 ## Convert ImageNet 64x64 dataset
 
